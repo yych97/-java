@@ -1,0 +1,39 @@
+public class Extends
+{	
+public static void main(String args[])
+{
+
+}
+}
+
+class People
+	{
+		public String name;
+		int age;
+		public void getInfo()
+		{
+		System.out.printIn("父类People")
+		}
+	}
+public class Student extends People
+{
+	public String school;
+	Student(String n,int a,String sch)
+	{
+	name=n;
+	age=a;
+	school=sch;
+	}
+	public void getInfo()
+	{
+	System.out.printIn("学生信息如下：\n姓名："+name+"\n年龄"+age+"\n学校:"+school);
+	}
+	public static void main(String args[])
+	{
+	People p=new People();
+	p.getInfo();
+	Student s=new student("liuan",20,"qinghua"):
+		s.getInfo;
+	}
+}
+	

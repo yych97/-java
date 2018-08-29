@@ -1,0 +1,41 @@
+class People
+	{
+		public String name;
+		//public int age;
+		public char sex='女';
+		private int age;
+		public void getInfo()
+		{
+		System.out.println("父类：People");
+		}
+	}
+
+Student extends People
+{
+	public String school;
+	private int age;
+	Student(String n,int a,String sch)
+	{
+	   name=n;
+	   age=a;
+	   school=sch;
+	}
+	public void getInfo()
+	{
+	   System.out.println("学生信息如下：\n姓名："+name+"\n年龄"+age+"\n学校:"+school);
+	}
+}
+
+public class Student
+{
+	
+	public static void main(String args[])
+	{
+	   People p=new People();
+	   p.getInfo();
+	   Student s=new Student("liuan",20,"qinghua");
+	   s.getInfo();
+	   System.out.println(s.sex);
+	}
+}
+	

@@ -1,0 +1,64 @@
+import java.io.*;
+public class p137
+{
+public static void main(String args[])
+{
+	String s;
+	try
+	{
+		File f1=new File("g:\\test","hello.txt");
+		if(f1.exists()==false)
+		{
+		RandomAccessFile raf1=new RandomAccessFile("g:\\test\\hello.txt","rw");
+		raf1.writeBytes("Hello!"+"\n");
+		//raf1.writeBytes("Welcome to Java World!\n");
+		raf1.close();		
+		}
+
+		if(f1.exists()==true)
+		{		
+		RandomAccessFile raf1=new RandomAccessFile("g:\\test\\hello.txt","rw");
+		//raf1.writeBytes("Hello!"+"\n");
+		raf1.writeBytes("Welcome to Java World!\n");
+		raf1.close();
+		}
+
+		RandomAccessFile raf3=new RandomAccessFile("g:\\test\\hello.txt","rw");
+		s=raf3.readLine();
+		while(s!=null)
+		{
+			System.out.println(s);
+			s=raf3.readLine();
+		}
+		raf3.close();
+		
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+	    System.out.println("继续输入吗?(1 继续 or 0 退出)");
+	    int a=Integer.parseInt(br.readLine());
+	    while(a==1)
+		{
+		RandomAccessFile raf2=new RandomAccessFile("g:\\test\\hello.txt","rw");
+		raf2.seek(raf2.length());
+		System.out.println("输入要输入的内容");
+	    BufferedReader br1=new BufferedReader(new InputStreamReader(System.in));	    
+		String b=br1.readLine();
+		raf2.writeBytes(b);
+		raf2.close();		
+
+		RandomAccessFile raf4=new RandomAccessFile("g:\\test\\hello.txt","rw");
+		s=raf4.readLine();
+		while(s!=null)
+		{
+			System.out.println(s);
+			s=raf4.readLine();
+		}
+		raf4.close();
+		System.out.println("继续输入吗?(1 继续 or 0 退出)");
+		a=Integer.parseInt(br.readLine());
+		}		
+	}
+	catch (Exception e)
+	{
+	}
+}
+}

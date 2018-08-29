@@ -1,0 +1,64 @@
+import java.util.*;
+
+public class p96
+{
+
+public static void main(String args[])
+{
+	Vector a=new Vector();
+	String n;
+	K k=new K();
+	a.addElement("Hello! ");
+	a.addElement("welcome to");
+	a.addElement(" program");
+	a.addElement(" world!");
+	a.insertElementAt(" C",2);
+	System.out.println(a.size());	
+	
+	k.Oout(a);
+	//Oout(a);
+	System.out.println();	
+	
+	a.setElementAt(" java",2);
+	a.removeElementAt(3);
+	System.out.println(a.size());
+	
+	k.Oout(a);
+	System.out.println();		
+	
+	System.out.println(a.indexOf(" java"));
+	System.out.println(a.size());
+	k.Oout(a);	
+}
+void Oout(Vector c)
+{	
+	for(int i=0;i<c.size();i++)
+	{
+		System.out.print(c.elementAt(i));
+	}
+	System.out.println();
+}
+}
+class K
+{
+	void Oout(Vector c)
+{	
+	for(int i=0;i<c.size();i++)
+	{
+		System.out.print(c.elementAt(i));
+	}
+	System.out.println();
+}
+}
+
+//class Vectors extends Vector
+//{
+	//void Oout(Vector c)
+//{	
+	//for(int i=0;i<c.size();i++)
+	//{
+		//System.out.print(c.elementAt(i));
+	//}
+	//System.out.println();
+//}
+//}

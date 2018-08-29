@@ -1,0 +1,35 @@
+public class p24
+{
+public static void main(String args[])
+{
+	int E=90;
+	E=(int)System.in.read();
+	if(E>=75)
+	{
+	  if(E>=90)
+		{
+	    System.out.println("英语打"+E+"分：");
+		System.out.println("英语是优");
+	    }
+	  else
+		{
+	    System.out.println("英语打"+E+"分：");
+		System.out.println("英语是良");
+	    }
+	}
+	else
+		{
+	    if(E>=60)
+			{
+		    System.out.println("英语打"+E+"分：");
+		    System.out.println("英语是及格");
+	    }
+	    else
+			{
+	        System.out.println("英语打"+E+"分：");
+		    System.out.println("英语不及格");
+	    }
+	}
+	
+}
+}

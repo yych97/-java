@@ -1,0 +1,66 @@
+public class Static
+{
+	//static int a=1;
+	//void setSize(double len,double wid,double hei,return double size)
+	//{
+		//size=len*wid*hei;
+	//}
+	class Auto
+	{
+		double length;
+		double width;
+		double height;
+		String color;
+		String condition;
+		int speed;
+		Auto(double len,double wid,double hei,String col,String con,int spe)
+	{
+		double length;
+		double width;
+		double height;
+		String color;
+		String condition;
+		int speed;
+	}
+		void setSize(double len,double wid,double hei)
+		{
+		length=len;
+		width=wid;
+		height=hei;
+		}
+		void setColor(String col)
+		{
+		color=col;
+		}
+		String getColor()
+		{
+		return color;
+		}
+		void start()
+		{
+		condition="running";
+
+		}
+		void stop()
+		{
+		condition="parking";
+		}
+		void setSpeed(int spe)
+		{
+		speed=spe;
+		}
+		int getSpeed()
+		{
+		return speed;
+		}
+	}
+public static void main(String args[])
+{
+	//int a=1;
+//System.out.println(setSize(10,10,10));
+Auto myA1=new Auto(5,1,8,1.6,"red","parking",0);
+	String s1;
+s1=myA1.length+","+myA1.width+",";
+System.out.println(s1);
+}
+}

@@ -1,0 +1,28 @@
+public class circle
+{
+public static void main(String args[])
+{
+	Circle Circle1=new Circle(1.0);
+	Circle1.CSqu();
+	System.out.println(Circle1.Squ);
+}
+}
+
+class Circle
+{
+	static double PI=3.1415926;
+	double ran;
+	double Squ;
+	
+	Circle(double r)
+	{
+	ran=r;	
+	}
+
+	double CSqu()
+	{
+	Squ=PI*ran*ran;
+	return Squ;
+	}
+
+}

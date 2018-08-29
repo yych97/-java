@@ -1,0 +1,45 @@
+import java.util.Arrays;
+public class p79
+{
+public static void main(String args[])
+{
+	//1
+	int a[];
+	a=new int[5];	
+	String s[]=new String[5];
+	for(int i=0;i<a.length;i++)
+	{
+		a[i]=i+1;		
+	}	
+	
+	for(int i=4;i>=0;i--)
+	{
+	String m="";	
+	for(int j=i;j>=0;j--)
+	{		
+		m+="a["+j+"]="+a[j]+" ";		
+	}
+	s[i]=m;
+	}	
+	
+	for(int i=4;i>=0;i--)
+	{		
+		System.out.println(s[i]);
+	}
+	
+	//2
+	int c[]={1,2,3,4,5};
+	int d[]={10,9,8,7,6};
+	int k;
+	for(int i=0;i<c.length;i++)
+	{
+		k=d[4-i]-c[i];
+		System.out.println(k);
+	}
+	Arrays.sort(d);
+	for (int i=0;i<d.length ;i++ )
+	{
+		System.out.println(d[i]);
+	}
+}
+}

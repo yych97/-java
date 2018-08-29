@@ -1,0 +1,36 @@
+public class P62
+{
+public static void main(String args[])
+{
+	A a=new A();
+	a.get(3);
+	a.get('M');
+	a.get("China");
+	a.get(3,'M');
+	a.get('M',3);
+}
+}
+class A
+{
+	void get(int i)
+	{
+		System.out.pintln("整数"+i);
+	}
+	void get(char i)
+	{
+		System.out.pintln("字符型"+i);
+	}
+	void get(String i)
+	{
+		System.out.pintln("字符串"+i);
+	}
+	void get(int i,char c)
+	{
+		System.out.pintln("整型"+i+"，字符型："+c);
+	}
+	void get(char c,int i)
+	{
+		System.out.pintln("字符型："+c+"，整型"+i);
+	}
+	
+}
